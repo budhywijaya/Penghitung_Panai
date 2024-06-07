@@ -1,3 +1,4 @@
+
 def penghitung_panai(pendidikan,dokter, haji, keluarga):
     uang_panai = 50000000
     pendidikan = pendidikan.upper()
