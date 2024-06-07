@@ -25,8 +25,8 @@ def penghitung_panai(pendidikan,dokter, haji, keluarga):
     return uang_panai
 
 if __name__ == "__main__":
-    pendidikan = "S2"
-    keluarga = "andi"
+    pendidikan = input("Masukkan pendidikan anda ")
+    keluarga = input("Anda termasuk keluarga bangsawan andi atau karaeng? ")
     dokter = True
     haji = True
     uang = penghitung_panai(pendidikan, dokter, haji, keluarga)
