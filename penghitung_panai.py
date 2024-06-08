@@ -28,7 +28,23 @@ def penghitung_panai(pendidikan,dokter, haji, keluarga):
 if __name__ == "__main__":
     pendidikan = input("Masukkan pendidikan anda ")
     keluarga = input("Anda termasuk keluarga bangsawan andi atau karaeng? ")
+    dokter_input = input("Apakah anda seorang dokter?(y/n) ")
+    dokter_input = dokter_input.lower()
+    if dokter_input == "iya" or dokter_input == "yes" or dokter_input == "y":
     dokter = True
+    elif dokter_input == "tidak" or dokter_input == "no" or dokter_input == "n":
+        dokter = False
+    else:
+        print("Invalid!")
+        dokter = False
+    haji_input = input("Apakah anda sudah berhaji?(y/n) ")
+    haji_input = haji_input.lower()
+    if haji_input == "iya" or haji_input == "yes" or haji_input == "y":
     haji = True
+    elif haji_input == "tidak" or haji_input == "no" or haji_input == "n":
+        haji = False
+    else:
+        print("Invalid!")
+        dokter = False
     uang = penghitung_panai(pendidikan, dokter, haji, keluarga)
     print("Uang ", uang)
