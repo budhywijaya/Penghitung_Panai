@@ -1,8 +1,5 @@
-
 def penghitung_panai(pendidikan,dokter, haji, keluarga):
     uang_panai = 50000000
-    pendidikan = pendidikan.upper()
-    keluarga = keluarga.lower()
     if pendidikan == "S1":
         uang_panai+=25000000
     elif pendidikan == "S2":
@@ -11,18 +8,16 @@ def penghitung_panai(pendidikan,dokter, haji, keluarga):
         uang_panai+=100000000
     else:
         uang_panai+=10000000
-    if dokter == True and haji == True:
+    #Menghitung panai jika dokter dan/atau haji
+    if dokter and haji:
         uang_panai+=300000000
-    elif dokter == False and haji == True:
+    elif not dokter and haji :
         uang_panai+=100000000
-    elif dokter == True and haji == False:
+    elif dokter and not haji:
         uang_panai+=200000000
-    else:
-        uang_panai+=0
-    if keluarga == "andi" or keluarga == "karaeng":
+    #menghitung panai jika keluarga bangsawan
+    if keluarga:
         uang_panai+=50000000
-    else:
-        uang_panai+=0
     return uang_panai
 
 if __name__ == "__main__":
